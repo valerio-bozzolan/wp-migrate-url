@@ -2,6 +2,18 @@
 
 Another WordPress migrate URL script.
 
+Sadly WordPress put the domain name everywhere instead of using relative URLs etc.
+
+I was somehow not happy about the existing scripts, so here you are another one.
+
+Database tables involved:
+
+* `posts` ( `post_content` and `post_excerpt` )
+* `options`
+* `postmeta`
+
+Yes, the `options` and `postmeta` tables contains serialized data. Also that will be migrated.
+
 ## Installation
 
 ```
@@ -21,6 +33,10 @@ Fill `load.php` with fill your database credentials.
 ```
 ./migrate.php http://old.url/ http://new.url/
 ```
+
+## Stupid questions
+
+* Why is this script in PHP? Because WordPress is in PHP and because PHP is not that bad. I wrote this script in 3 minutes.
 
 ## License
 
