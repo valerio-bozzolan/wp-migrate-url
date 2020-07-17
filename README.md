@@ -22,6 +22,8 @@ git clone https://gitpull.it/source/suckless-php.git
 git clone https://gitpull.it/source/wp-migrate-url.git
 ```
 
+Yes, it's based on my awesome and dummy [suckless-php](https://gitpull.it/source/suckless-php/).
+
 ## Configuration
 
 Copy the file `load-example.php` as `load.php`.
