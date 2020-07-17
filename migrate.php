@@ -1,9 +1,20 @@
+#!/usr/bin/php
 <?php
 require 'load.php';
 
-// MUST end with trailing slash
-$from = "http://border-radio.reyboz.it/";
-$to   = "https://border-radio.it/";
+// to do not break anything it's better to end with a slash if your domain is short
+$from = $argv[1] ?? null; // "http://test.sangirolamobari.com"
+$to   = $argv[2] ?? null; // "http://www.sangirolamobari.com"
+
+if( !$from ) {
+	echo "Missing FROMURL\n";
+	exit;
+}
+
+if( !$to ) {
+	echo "Missing TOURL\n";
+	exit;
+}
 
 // make relative URLs in image pathnames
 foreach( [ 'post_content', 'post_excerpt' ] as $text_columm ) {
