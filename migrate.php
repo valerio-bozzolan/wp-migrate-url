@@ -6,13 +6,9 @@ require 'load.php';
 $from = $argv[1] ?? null; // "http://test.sangirolamobari.com"
 $to   = $argv[2] ?? null; // "http://www.sangirolamobari.com"
 
-if( !$from ) {
-	echo "Missing FROMURL\n";
-	exit;
-}
-
-if( !$to ) {
-	echo "Missing TOURL\n";
+// no args no party
+if( !$from || !$to ) {
+	echo "Usage: {$argv[0]} FROM_URL TO_URL\n";
 	exit;
 }
 
